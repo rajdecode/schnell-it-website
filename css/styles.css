@@ -8,13 +8,13 @@
 /* ── 1. CSS Custom Properties ────────────────────────────── */
 :root {
   /* Colors — lighter, softer slate palette */
-  --bg-primary: #111827;
-  /* slate-900 equivalent — not jet black */
-  --bg-surface: #1a2234;
+  --bg-primary: #0B1120;
+  /* slate-900 equivalent — not jet black, but darker for LCDs */
+  --bg-surface: #131B2A;
   /* clearly distinguishable surface */
-  --bg-card: #1e2a3d;
+  --bg-card: #182336;
   /* card with visible depth */
-  --bg-card-hover: #243247;
+  --bg-card-hover: #1E2C43;
 
   --accent-blue: #60A5FA;
   /* brighter, more readable blue */
