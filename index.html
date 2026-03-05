@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schnell IT — Boutique Web Application Engineering Partner</title>
+  <meta name="description"
+    content="Schnell IT is a boutique technology partner specialising in web application development, SaaS engineering, enterprise portals, and platform modernisation. India & Europe." />
+  <meta name="keywords"
+    content="web application development India, SaaS development company, enterprise portal development, API engineering, cloud migration, web app modernisation" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Schnell IT — Architecture-First Web Engineering" />
+  <meta property="og:description"
+    content="We architect web platforms, SaaS products, and enterprise systems built to scale. India | Europe." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://schnellit.com/" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://schnellit.com/" />
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234F8EF7'/><text x='16' y='23' text-anchor='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>S</text></svg>" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="/" class="nav-logo" aria-label="Schnell IT Home">
+          <div class="nav-logo-mark">S</div>
+          <div class="nav-logo-text">Schnell<span> IT</span></div>
+        </a>
+
+        <!-- Links -->
+        <ul class="nav-links">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#insights" class="nav-link">Insights</a></li>
+          <li><a href="#engagement" class="nav-link">Approach</a></li>
+        </ul>
+
+        <!-- CTA -->
+        <a href="#contact" class="btn btn-primary nav-cta btn-arrow" id="nav-cta">Discuss your project</a>
+
+        <!-- Hamburger -->
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#insights">Insights</a>
+    <a href="#engagement">Approach</a>
+    <a href="#contact" class="btn btn-primary mobile-drawer-cta"
+      style="margin-top:24px; justify-content:center;">Discuss your project →</a>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       SECTION 1 — HERO
+  ════════════════════════════════════════ -->
+  <section class="hero" id="home" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left: Copy -->
+        <div class="hero-copy">
+          <div class="hero-tag fade-in" aria-hidden="true">
+            <span class="hero-tag-dot"></span>
+            Boutique Technology Partner
+          </div>
+
+          <h1 class="hero-headline fade-up delay-1" id="hero-heading">
+            Strategic Web Engineering.<br>
+            <span class="highlight">For platforms that matter.</span>
+          </h1>
+
+          <p class="hero-sub fade-up delay-2">
+            We architect web platforms, SaaS products, and enterprise portals with deliberate structure — built for
+            where you're going, not just where you are today.
+          </p>
+
+          <div class="hero-ctas fade-up delay-3">
+            <a href="#contact" class="btn btn-primary  btn-arrow" id="hero-cta-primary">Schedule a Technical Call</a>
+            <a href="#work" class="btn btn-ghost    btn-arrow" id="hero-cta-secondary">See Selected Work</a>
+          </div>
+
+          <div class="hero-meta fade-in delay-4">
+            <div class="hero-meta-item">India & Europe</div>
+            <div class="hero-meta-item">Architecture-First</div>
+            <div class="hero-meta-item">Remote-Friendly</div>
+          </div>
+        </div>
+
+        <!-- Right: Canvas -->
+        <div class="hero-visual" aria-hidden="true">
+          <canvas id="network-canvas" title="Interconnected system architecture visualization"></canvas>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 2 — TRUST STRIP
+  ════════════════════════════════════════ -->
+  <div class="trust-strip" aria-label="Client trust signals">
+    <div class="container">
+      <div class="trust-strip-inner">
+        <span class="trust-label">Trusted by teams across</span>
+        <div class="trust-logos">
+          <div class="trust-logo-pill">
+            <div class="trust-logo-pill-icon" style="background:#1A3A5C;">🏦</div> FinTech
+          </div>
+          <div class="trust-logo-pill">
+            <div class="trust-logo-pill-icon" style="background:#1A3A2C;">🏥</div> HealthTech
+          </div>
+          <div class="trust-logo-pill">
+            <div class="trust-logo-pill-icon" style="background:#2C1A3A;">⚙️</div> SaaS
+          </div>
+          <div class="trust-logo-pill">
+            <div class="trust-logo-pill-icon" style="background:#3A2A1A;">🏗️</div> Enterprise
+          </div>
+          <div class="trust-logo-pill">
+            <div class="trust-logo-pill-icon" style="background:#1A2A3A;">📦</div> Logistics
+          </div>
+        </div>
+        <div class="trust-geo">
+          🇮🇳 India &nbsp;·&nbsp; 🇩🇪 Germany &nbsp;·&nbsp; 🇬🇧 UK &nbsp;·&nbsp; 🇦🇪 UAE
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       SECTION 3 — THE SCHNELL DIFFERENCE
+  ════════════════════════════════════════ -->
+  <section class="section difference-section" aria-labelledby="diff-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Why Schnell IT</div>
+        <h2 id="diff-heading" class="fade-up">Precision Engineering.</h2>
+        <p class="fade-up delay-1">Most firms measure success by velocity. We measure it by longevity.</p>
+      </div>
+
+      <div class="diff-grid">
+        <div class="diff-card fade-up delay-1">
+          <div class="diff-card-icon">🏗️</div>
+          <h3>Architecture First</h3>
+          <p>Every engagement starts with a system design review — mapping dependencies and growth vectors before
+            writing line one. This prevents the expensive rewrites nobody warns you about.</p>
+        </div>
+        <div class="diff-card fade-up delay-2">
+          <div class="diff-card-icon">📐</div>
+          <h3>Disciplined Delivery</h3>
+          <p>Fortnightly milestones, written decision logs, and documented tradeoffs. You always know exactly where
+            things stand — and why key decisions were made.</p>
+        </div>
+        <div class="diff-card fade-up delay-3">
+          <div class="diff-card-icon">🤝</div>
+          <h3>Long-term Partnership</h3>
+          <p>We don't disappear after launch. On a retainer model, we maintain, evolve, and harden your platform as you
+            grow — keeping senior engineers available, not just account managers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 4 — SERVICES
+  ════════════════════════════════════════ -->
+  <section class="section services-section" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Capability Areas</div>
+        <h2 id="services-heading" class="fade-up">What We Build</h2>
+      </div>
+
+      <div class="services-categories">
+
+        <!-- Category: Build -->
+        <div class="fade-up">
+          <div class="service-cat-label cat-build">⬡ Build — New Platforms</div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-card-icon">🖥️</div>
+              <h4>Web Application Development</h4>
+              <p>Full-stack web platforms — from architecture to deployment — built to handle real scale without
+                structural rewrites.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-icon">☁️</div>
+              <h4>SaaS Application Development</h4>
+              <p>Multi-tenant SaaS architectures engineered for reliability, performance, and flexibility.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-icon">🏢</div>
+              <h4>Enterprise Portals & Workflows</h4>
+              <p>Internal platforms replacing spreadsheets with structured, auditable APIs and automated flows.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Evolve -->
+        <div class="fade-up delay-1">
+          <div class="service-cat-label cat-evolve">⬡ Evolve — Modernize Existing</div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-card-icon">🔄</div>
+              <h4>Application Modernization</h4>
+              <p>Migrate aging monoliths to modern architectures without disrupting live operations.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-icon">🎨</div>
+              <h4>UI/UX Revamps</h4>
+              <p>Redesign interfaces that have aged out of user expectations — preserving the underlying logic.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-icon">⚡</div>
+              <h4>Performance Optimization</h4>
+              <p>Diagnose and eliminate the core database, API, and frontend bottlenecks slowing you down.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Connect -->
+        <div class="fade-up delay-2">
+          <div class="service-cat-label cat-connect">⬡ Connect — Integrations & Infrastructure</div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-card-icon">🔌</div>
+              <h4>API Engineering</h4>
+              <p>Design domain-driven APIs that serve as reliable contracts between your systems.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-icon">☁️</div>
+              <h4>Cloud Migration & DevOps</h4>
+              <p>Move to AWS, Azure, or GCP with secure CI/CD, IaC, and robust observability pipelines.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Harden -->
+        <div class="fade-up delay-3">
+          <div class="service-cat-label cat-harden">⬡ Harden — Security & Automation</div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-card-icon">🔒</div>
+              <h4>Security Hardening</h4>
+              <p>Application-level security review, threat-modeling, and compliance readiness across OWASP.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-icon">🤖</div>
+              <h4>Process Automation</h4>
+              <p>Replace manual workflows with engineered automation that compounds in value over time.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 5 — WHO WE WORK WITH
+  ════════════════════════════════════════ -->
+  <section class="section clients-section" id="clients" aria-labelledby="clients-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Ideal Clients</div>
+        <h2 id="clients-heading" class="fade-up">Built for Inflection Points.</h2>
+        <p class="fade-up delay-1">We are selective. We work best with organizations making a consequential technology
+          decision that will shape their systems for years.</p>
+      </div>
+
+      <div class="clients-grid">
+        <div class="client-card fade-up delay-1">
+          <span class="client-card-emoji">🚀</span>
+          <h3>Funded Startups</h3>
+          <p>You've raised capital. Build it right the first time — not fast, then fix it in year three. We architect
+            platforms that survive traction.</p>
+        </div>
+        <div class="client-card fade-up delay-2">
+          <span class="client-card-emoji">📈</span>
+          <h3>Mid-Market Companies</h3>
+          <p>The system that got you here is now slowing you down. We bring senior architectural thinking to
+            modernizations that can't afford to fail.</p>
+        </div>
+        <div class="client-card fade-up delay-3">
+          <span class="client-card-emoji">🏢</span>
+          <h3>Enterprise Teams</h3>
+          <p>Legacy portals and monoliths are holding you back. We modernize without disruption — a phased approach that
+            keeps operations running while we rebuild the foundation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 6 — CASE STUDIES
+  ════════════════════════════════════════ -->
+  <section class="section casestudies-section" id="work" aria-labelledby="work-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Selected Work</div>
+        <h2 id="work-heading" class="fade-up">What We've Shipped</h2>
+      </div>
+
+      <div class="casestudies-grid">
+
+        <div class="case-card fade-up delay-1">
+          <div class="case-card-meta">
+            <span class="case-pill">HealthTech</span>
+            <span class="case-pill">SaaS Platform</span>
+          </div>
+          <h3>SaaS Architectural Migration</h3>
+          <div class="case-card-metric">
+            <div class="case-metric-val">68%</div>
+            <div class="case-metric-label">Reduction in portal load time post-migration</div>
+          </div>
+          <p>A post-Series A monolith couldn't handle 3× user growth. We designed a modular, event-driven architecture
+            and executed a phased migration — six months, zero downtime, 68% faster.</p>
+        </div>
+
+        <div class="case-card fade-up delay-2">
+          <div class="case-card-meta">
+            <span class="case-pill">FinTech</span>
+            <span class="case-pill">Enterprise Portal</span>
+          </div>
+          <h3>Enterprise Portal Construction</h3>
+          <div class="case-card-metric">
+            <div class="case-metric-val">4×</div>
+            <div class="case-metric-label">Increase in daily loan processing throughput</div>
+          </div>
+          <p>12 people manually reconciling spreadsheets daily. We replaced it with a structured workflow portal with
+            role-based access and core banking API integrations — 4× throughput from day one.</p>
+        </div>
+
+        <div class="case-card fade-up delay-3">
+          <div class="case-card-meta">
+            <span class="case-pill">Logistics</span>
+            <span class="case-pill">API Engineering</span>
+          </div>
+          <h3>Operational API Gateway</h3>
+          <div class="case-card-metric">
+            <div class="case-metric-val">91%</div>
+            <div class="case-metric-label">Reduction in manual data-reconciliation hours per week</div>
+          </div>
+          <p>Six downstream systems, no single source of truth. Our domain-driven API gateway unified shipment,
+            inventory, and billing — eliminating 40 hours of weekly manual reconciliation.</p>
+        </div>
+
+      </div>
+
+      <div class="fade-up" style="text-align:center; margin-top:48px;">
+        <a href="#contact" class="btn btn-ghost btn-arrow" id="work-cta">Let's discuss your platform</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 7 — ENGAGEMENT MODEL
+  ════════════════════════════════════════ -->
+  <section class="section engagement-section" id="engagement" aria-labelledby="engagement-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">How We Work</div>
+        <h2 id="engagement-heading" class="fade-up">Engagement Process</h2>
+      </div>
+
+      <div class="engagement-steps">
+        <div class="engagement-step fade-up delay-1">
+          <div class="step-number"><span class="step-num-text">01</span></div>
+          <h3>Discovery Call</h3>
+          <p>30 minutes. No templates, no presales script. We listen to your system and your three-year ambition. Zero
+            cost, zero commitment.</p>
+        </div>
+        <div class="engagement-step fade-up delay-2">
+          <div class="step-number"><span class="step-num-text">02</span></div>
+          <h3>Architecture Review</h3>
+          <p>We map your system and identify risk points and tradeoffs. You receive a written Architecture Brief — yours
+            to keep, regardless of whether we proceed.</p>
+        </div>
+        <div class="engagement-step fade-up delay-3">
+          <div class="step-number"><span class="step-num-text">03</span></div>
+          <h3>Phased Delivery</h3>
+          <p>Milestone-based, not sprint-based. You review working software, not ticket counts. Every decision
+            documented in plain language.</p>
+        </div>
+        <div class="engagement-step fade-up delay-4">
+          <div class="step-number"><span class="step-num-text">04</span></div>
+          <h3>Evolution & Support</h3>
+          <p>Post-launch, we stay. Performance monitoring, security hardening, and feature evolution — senior engineers
+            on retainer for your platform's next chapter.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 8 — ABOUT
+  ════════════════════════════════════════ -->
+  <section class="section about-section" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-content fade-up">
+          <div class="tag">About Schnell IT</div>
+          <h2 id="about-heading">We founded Schnell IT because great engineering deserves better company.</h2>
+
+          <p style="color:var(--text-secondary); line-height:1.75; margin-top:24px; font-size:15px;">Most companies
+            don't have a development problem — they have an architecture problem that compounds over time. Applications
+            are built fast and patched forever, not because teams lack talent, but because no one paused to design the
+            system first.</p>
+
+          <p style="color:var(--text-secondary); line-height:1.75; margin-top:14px; font-size:15px;">We are deliberately
+            small and deliberately senior. Every engagement is led by an architect — because the best engineering
+            happens in relationships, not transactions.</p>
+
+          <blockquote>
+            <p>"We take on fewer clients than we could, so we can do better work than we otherwise would."</p>
+            <cite>— Engineering Leadership, Schnell IT</cite>
+          </blockquote>
+
+          <a href="#contact" class="btn btn-ghost btn-arrow" style="margin-top:8px;" id="about-cta">Start the
+            conversation</a>
+        </div>
+
+        <div class="about-stats fade-up delay-2">
+          <div class="about-stat">
+            <div class="about-stat-val" data-count="8" data-suffix="+">8+</div>
+            <div class="about-stat-label">Years of enterprise web engineering experience</div>
+          </div>
+          <div class="about-stat about-stat-teal">
+            <div class="about-stat-val" data-count="40" data-suffix="+">40+</div>
+            <div class="about-stat-label">Web platforms and applications delivered</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val" data-count="5">5</div>
+            <div class="about-stat-label">Countries with active client partnerships</div>
+          </div>
+          <div class="about-stat about-stat-teal">
+            <div class="about-stat-val" data-count="94" data-suffix="%">94%</div>
+            <div class="about-stat-label">Client retention rate on retainer engagements</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 9 — INSIGHTS
+  ════════════════════════════════════════ -->
+  <section class="section insights-section" id="insights" aria-labelledby="insights-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Thinking Out Loud</div>
+        <h2 id="insights-heading" class="fade-up">Our Perspective</h2>
+      </div>
+
+      <div class="insights-grid">
+        <div class="insight-card fade-up delay-1">
+          <span class="insight-cat">Architecture</span>
+          <h3>When to Modernize vs. When to Rebuild: A Framework for CTOs</h3>
+          <p>The wrong answer to this question will cost you 18 months and a significant portion of your engineering
+            budget. Here's how we think about it.</p>
+          <div class="insight-read-time">8 min read</div>
+        </div>
+        <div class="insight-card fade-up delay-2">
+          <span class="insight-cat">API Engineering</span>
+          <h3>What Your API Architecture Says About Your Culture</h3>
+          <p>APIs are not just technical contracts — they're organizational boundaries made explicit. How you design
+            them reveals how your teams communicate.</p>
+          <div class="insight-read-time">6 min read</div>
+        </div>
+        <div class="insight-card fade-up delay-3">
+          <span class="insight-cat">Strategy</span>
+          <h3>The Hidden Cost of Fast MVPs</h3>
+          <p>Moving fast has compounding costs that only become visible at scale. Here's how to build for speed today
+            without paying for it in architecture debt tomorrow.</p>
+          <div class="insight-read-time">5 min read</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 10 — FINAL CTA
+  ════════════════════════════════════════ -->
+  <section class="cta-section" id="contact" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <div class="tag" style="justify-content:center;">Ready to build correctly?</div>
+        <h2 id="cta-heading">
+          Let's Spend 30 Minutes<br>
+          <span style="color:var(--accent-blue);">on Your Architecture.</span>
+        </h2>
+        <p>No templates, no decks, no presales. Just a real conversation about your system and what a well-engineered
+          future looks like for your business.</p>
+
+        <div class="cta-buttons">
+          <a href="mailto:hello@schnellit.com?subject=Discovery Call Request&body=Hi Schnell IT team, I'd like to schedule a Discovery Call to discuss..."
+            class="btn btn-primary btn-arrow" id="cta-email">Schedule a Discovery Call</a>
+        </div>
+
+        <p class="cta-note">
+          Or email us directly at
+          <a href="mailto:hello@schnellit.com" style="color:var(--accent-blue);">hello@schnellit.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="/" class="nav-logo" style="margin-bottom:0;" aria-label="Schnell IT">
+            <div class="nav-logo-mark">S</div>
+            <div class="nav-logo-text">Schnell<span> IT</span></div>
+          </a>
+          <p>Architecture-first web engineering for startups, scale-ups, and enterprise teams. India · Europe · Remote.
+          </p>
+          <div class="footer-geo">
+            <span class="footer-geo-tag">🇮🇳 India</span>
+            <span class="footer-geo-tag">🇩🇪 Germany</span>
+            <span class="footer-geo-tag">🇬🇧 UK</span>
+            <span class="footer-geo-tag">🇦🇪 UAE</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web App Development</a></li>
+            <li><a href="#services">SaaS Development</a></li>
+            <li><a href="#services">Enterprise Portals</a></li>
+            <li><a href="#services">App Modernization</a></li>
+            <li><a href="#services">API Engineering</a></li>
+            <li><a href="#services">Cloud & DevOps</a></li>
+            <li><a href="#services">Security Hardening</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Selected Work</a></li>
+            <li><a href="#engagement">How We Work</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/schnell-it-solutions" target="_blank"
+                rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:hello@schnellit.com">hello@schnellit.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          © 2026 Schnell IT Solutions.
+          <span>Architecture-first. Delivery-disciplined.</span>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
