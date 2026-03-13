@@ -212,3 +212,34 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+// ── 8. Theme Toggle ─────────────────────────────────────────
+const themeToggle = document.getElementById('theme-toggle');
+const iconSun = themeToggle?.querySelector('.icon-sun');
+const iconMoon = themeToggle?.querySelector('.icon-moon');
+
+function setTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    if (iconSun) iconSun.style.display = 'block';
+    if (iconMoon) iconMoon.style.display = 'none';
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    if (iconSun) iconSun.style.display = 'none';
+    if (iconMoon) iconMoon.style.display = 'block';
+  }
+  localStorage.setItem('schnell-theme', theme);
+}
+
+// Initialize theme from local storage or default to dark
+const savedTheme = localStorage.getItem('schnell-theme');
+if (savedTheme) {
+  setTheme(savedTheme);
+}
+
+themeToggle?.addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+});
+

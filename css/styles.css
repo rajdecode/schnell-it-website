@@ -35,6 +35,9 @@
   /* subtle but visible */
   --border-strong: rgba(96, 165, 250, 0.30);
 
+  /* Nav */
+  --bg-nav-scroll: rgba(17, 24, 39, 0.94);
+
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -51,6 +54,27 @@
   /* Transitions */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --trans: 0.25s var(--ease);
+}
+
+[data-theme="light"] {
+  --bg-primary: #F8FAFC; /* slate-50 */
+  --bg-surface: #ffffff; /* white */
+  --bg-card: #ffffff; /* white */
+  --bg-card-hover: #F1F5F9; /* slate-100 */
+
+  --accent-blue: #2563EB; /* darker blue for visibility */
+  --accent-blue-dim: #1D4ED8;
+  --accent-teal: #10B981; /* darker teal */
+  --accent-glow: rgba(37, 99, 235, 0.08);
+
+  --text-primary: #0F172A; /* slate-900 */
+  --text-secondary: #334155; /* slate-700 */
+  --text-muted: #64748B; /* slate-500 */
+
+  --border: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(37, 99, 235, 0.30);
+  
+  --bg-nav-scroll: rgba(255, 255, 255, 0.94);
 }
 
 /* ── 2. Reset & Base ─────────────────────────────────────── */
@@ -226,6 +250,26 @@ button {
   transform: translateY(-1px);
 }
 
+.theme-toggle {
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: var(--trans);
+  border: 1px solid transparent;
+}
+
+.theme-toggle:hover {
+  background: rgba(148, 163, 184, 0.1);
+  border-color: var(--border);
+}
+
 .btn-arrow::after {
   content: '→';
   transition: transform 0.2s var(--ease);
@@ -247,10 +291,10 @@ button {
 }
 
 .nav.scrolled {
-  background: rgba(17, 24, 39, 0.94);
+  background: var(--bg-nav-scroll);
   border-bottom-color: var(--border);
   backdrop-filter: blur(16px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-inner {
@@ -270,6 +314,7 @@ button {
   letter-spacing: -0.04em;
   color: var(--text-primary);
   flex-shrink: 0;
+  transition: color 0.3s var(--ease);
 }
 
 .nav-logo-mark {
@@ -307,7 +352,23 @@ button {
 
 .nav-link:hover {
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(148, 163, 184, 0.1);
+}
+
+[data-theme="light"] .nav.scrolled .nav-logo {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .nav.scrolled .nav-link {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .nav.scrolled .nav-link:hover {
+  color: var(--accent-blue);
+}
+
+[data-theme="light"] .nav.scrolled .theme-toggle {
+  color: var(--text-primary);
 }
 
 .nav-cta {
@@ -623,7 +684,78 @@ button {
 .services-categories {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 80px;
+}
+
+/* ── 9.1 Service Category Rows ───────────────────────────── */
+.service-category-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: stretch; /* Make both columns equal height */
+}
+
+@media (max-width: 899px) {
+  .service-category-row .service-category-visual,
+  .service-category-row.reverse .service-category-visual {
+    order: 1 !important;
+  }
+  .service-category-row .service-category-content,
+  .service-category-row.reverse .service-category-content {
+    order: 2 !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .service-category-row {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 64px;
+  }
+  
+  .service-category-row.reverse .service-category-visual {
+    order: 2;
+  }
+  .service-category-row.reverse .service-category-content {
+    order: 1;
+  }
+}
+
+.service-category-visual {
+  width: 100%;
+  height: 100%;
+  min-height: 300px; /* Base height for mobile */
+}
+
+.service-category-image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  height: 100%; /* Stretch to fill visual wrapper */
+  display: block;
+}
+
+.service-category-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-category-row:hover .service-category-image-wrap img {
+  transform: scale(1.05);
+}
+
+.service-category-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, rgba(11, 17, 32, 0.3) 100%);
+  pointer-events: none;
+}
+
+.service-category-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .service-cat-label {
@@ -665,20 +797,25 @@ button {
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  justify-content: center;
 }
 
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 24px 24px 20px;
+  padding: 20px 24px;
   transition: var(--trans);
   cursor: default;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .service-card:hover {
@@ -689,22 +826,34 @@ button {
 }
 
 .service-card-icon {
-  font-size: 26px;
-  margin-bottom: 12px;
+  font-size: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.service-card-text {
+  flex-grow: 1;
 }
 
 .service-card h4 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.01em;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   color: var(--text-primary);
 }
 
 .service-card p {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 /* ── 10. Who We Work With ────────────────────────────────── */

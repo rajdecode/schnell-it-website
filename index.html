@@ -54,8 +54,15 @@
           <li><a href="#insights" class="nav-link">Insights</a></li>
         </ul>
 
-        <!-- CTA -->
-        <a href="#contact" class="btn btn-primary nav-cta btn-arrow" id="nav-cta">Discuss your project</a>
+        <!-- Controls & CTA -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+            <span class="icon-sun" style="display: none;">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </button>
+          
+          <a href="#contact" class="btn btn-primary nav-cta btn-arrow" id="nav-cta">Discuss your project</a>
+        </div>
 
         <!-- Hamburger -->
         <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
@@ -207,113 +214,167 @@
       <div class="services-categories">
 
         <!-- Category: AI -->
-        <div class="fade-up">
-          <div class="service-cat-label cat-connect">⬡ AI — Intelligent Systems</div>
-          <div class="services-grid">
-
-            <div class="service-card">
-              <div class="service-card-icon">🧠</div>
-              <h4>AI Strategy & Use-Case Design</h4>
-              <p>We identify high-impact opportunities where AI can improve workflows, products, or operational
-                efficiency — and design systems that deliver measurable outcomes.</p>
+        <div class="service-category-row fade-up">
+          <div class="service-category-visual">
+            <div class="service-category-image-wrap">
+              <img src="images/services/ai.png" alt="AI Intelligent Systems">
+              <div class="service-category-overlay"></div>
             </div>
-
-            <div class="service-card">
-              <div class="service-card-icon">📄</div>
-              <h4>AI Document Processing</h4>
-              <p>Extract, classify, and structure data from invoices, forms, PDFs, and reports using AI pipelines that
-                turn unstructured documents into usable system data.</p>
+          </div>
+          <div class="service-category-content">
+            <div class="service-cat-label cat-connect">⬡ AI — Intelligent Systems</div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-card-icon">🧠</div>
+                <div class="service-card-text">
+                  <h4>AI Strategy & Use-Case Design</h4>
+                  <p>We identify high-impact opportunities where AI can improve workflows, products, or operational efficiency — and design systems that deliver measurable outcomes.</p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-card-icon">📄</div>
+                <div class="service-card-text">
+                  <h4>AI Document Processing</h4>
+                  <p>Extract, classify, and structure data from invoices, forms, PDFs, and reports using AI pipelines that turn unstructured documents into usable system data.</p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-card-icon">🤖</div>
+                <div class="service-card-text">
+                  <h4>AI Automation & Agents</h4>
+                  <p>Deploy AI assistants and autonomous agents that handle repetitive tasks, orchestrate workflows, and assist teams with real-time insights.</p>
+                </div>
+              </div>
             </div>
-
-            <div class="service-card">
-              <div class="service-card-icon">🤖</div>
-              <h4>AI Automation & Agents</h4>
-              <p>Deploy AI assistants and autonomous agents that handle repetitive tasks, orchestrate workflows, and
-                assist teams with real-time insights.</p>
-            </div>
-
           </div>
         </div>
-
 
         <!-- Category: Build -->
-        <div class="fade-up">
-          <div class="service-cat-label cat-build">⬡ Build — New Platforms</div>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-card-icon">🖥️</div>
-              <h4>Web Application Development</h4>
-              <p>Full-stack web platforms — from architecture to deployment — built to handle real scale without
-                structural rewrites.</p>
+        <div class="service-category-row reverse fade-up delay-1">
+          <div class="service-category-visual">
+            <div class="service-category-image-wrap">
+              <img src="images/services/build.png" alt="Build New Platforms">
+              <div class="service-category-overlay"></div>
             </div>
-            <div class="service-card">
-              <div class="service-card-icon">☁️</div>
-              <h4>SaaS Application Development</h4>
-              <p>Multi-tenant SaaS architectures engineered for reliability, performance, and flexibility.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-card-icon">🏢</div>
-              <h4>Enterprise Portals & Workflows</h4>
-              <p>Internal platforms replacing spreadsheets with structured, auditable APIs and automated flows.</p>
+          </div>
+          <div class="service-category-content">
+            <div class="service-cat-label cat-build">⬡ Build — New Platforms</div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-card-icon">🖥️</div>
+                <div class="service-card-text">
+                  <h4>Web Application Development</h4>
+                  <p>Full-stack web platforms — from architecture to deployment — built to handle real scale without structural rewrites.</p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-card-icon">☁️</div>
+                <div class="service-card-text">
+                  <h4>SaaS Application Development</h4>
+                  <p>Multi-tenant SaaS architectures engineered for reliability, performance, and flexibility.</p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-card-icon">🏢</div>
+                <div class="service-card-text">
+                  <h4>Enterprise Portals & Workflows</h4>
+                  <p>Internal platforms replacing spreadsheets with structured, auditable APIs and automated flows.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
 
         <!-- Category: Evolve -->
-        <div class="fade-up delay-1">
-          <div class="service-cat-label cat-evolve">⬡ Evolve — Modernize Existing</div>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-card-icon">🔄</div>
-              <h4>Application Modernization</h4>
-              <p>Migrate aging monoliths to modern architectures without disrupting live operations.</p>
+        <div class="service-category-row fade-up delay-2">
+          <div class="service-category-visual">
+            <div class="service-category-image-wrap">
+              <img src="images/services/evolve.png" alt="Evolve Modernize Existing">
+              <div class="service-category-overlay"></div>
             </div>
-            <div class="service-card">
-              <div class="service-card-icon">🎨</div>
-              <h4>UI/UX Revamps</h4>
-              <p>Redesign interfaces that have aged out of user expectations — preserving the underlying logic.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-card-icon">⚡</div>
-              <h4>Performance Optimization</h4>
-              <p>Diagnose and eliminate the core database, API, and frontend bottlenecks slowing you down.</p>
+          </div>
+          <div class="service-category-content">
+            <div class="service-cat-label cat-evolve">⬡ Evolve — Modernize Existing</div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-card-icon">🔄</div>
+                <div class="service-card-text">
+                  <h4>Application Modernization</h4>
+                  <p>Migrate aging monoliths to modern architectures without disrupting live operations.</p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-card-icon">🎨</div>
+                <div class="service-card-text">
+                  <h4>UI/UX Revamps</h4>
+                  <p>Redesign interfaces that have aged out of user expectations — preserving the underlying logic.</p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-card-icon">⚡</div>
+                <div class="service-card-text">
+                  <h4>Performance Optimization</h4>
+                  <p>Diagnose and eliminate the core database, API, and frontend bottlenecks slowing you down.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
 
         <!-- Category: Connect -->
-        <div class="fade-up delay-2">
-          <div class="service-cat-label cat-connect">⬡ Connect — Integrations & Infrastructure</div>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-card-icon">🔌</div>
-              <h4>API Engineering</h4>
-              <p>Design domain-driven APIs that serve as reliable contracts between your systems.</p>
+        <div class="service-category-row reverse fade-up delay-3">
+          <div class="service-category-visual">
+            <div class="service-category-image-wrap">
+              <img src="images/services/connect.png" alt="Connect Integrations Infrastructure">
+              <div class="service-category-overlay"></div>
             </div>
-            <div class="service-card">
-              <div class="service-card-icon">☁️</div>
-              <h4>Cloud Migration & DevOps</h4>
-              <p>Move to AWS, Azure, or GCP with secure CI/CD, IaC, and robust observability pipelines.</p>
+          </div>
+          <div class="service-category-content">
+            <div class="service-cat-label cat-connect">⬡ Connect — Integrations & Infrastructure</div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-card-icon">🔌</div>
+                <div class="service-card-text">
+                  <h4>API Engineering</h4>
+                  <p>Design domain-driven APIs that serve as reliable contracts between your systems.</p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-card-icon">☁️</div>
+                <div class="service-card-text">
+                  <h4>Cloud Migration & DevOps</h4>
+                  <p>Move to AWS, Azure, or GCP with secure CI/CD, IaC, and robust observability pipelines.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-
         <!-- Category: Harden -->
-        <div class="fade-up delay-3">
-          <div class="service-cat-label cat-harden">⬡ Harden — Security & Automation</div>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-card-icon">🔒</div>
-              <h4>Security Hardening</h4>
-              <p>Application-level security review, threat-modeling, and compliance readiness across OWASP.</p>
+        <div class="service-category-row fade-up delay-4">
+          <div class="service-category-visual">
+            <div class="service-category-image-wrap">
+              <img src="images/services/harden.png" alt="Harden Security Automation">
+              <div class="service-category-overlay"></div>
             </div>
-            <div class="service-card">
-              <div class="service-card-icon">⚙️</div>
-              <h4>Process Automation</h4>
-              <p>Replace manual workflows with engineered automation that compounds in value over time.</p>
+          </div>
+          <div class="service-category-content">
+            <div class="service-cat-label cat-harden">⬡ Harden — Security & Automation</div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-card-icon">🔒</div>
+                <div class="service-card-text">
+                  <h4>Security Hardening</h4>
+                  <p>Application-level security review, threat-modeling, and compliance readiness across OWASP.</p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-card-icon">⚙️</div>
+                <div class="service-card-text">
+                  <h4>Process Automation</h4>
+                  <p>Replace manual workflows with engineered automation that compounds in value over time.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
